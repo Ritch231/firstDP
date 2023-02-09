@@ -1,0 +1,21 @@
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Build Docker Image
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        context: .
+        tags: python:3.11.1
