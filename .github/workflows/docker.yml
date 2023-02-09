@@ -19,5 +19,5 @@ jobs:
         push: true
         context: .
         tags: vicen0326/firstpy:v2
-        username: ${{ env.DOCKER_USERNAME }}
-        password: ${{ env.DOCKER_PASSWORD }}
+        username: vicen0326
+        password: Mfkd89902268
