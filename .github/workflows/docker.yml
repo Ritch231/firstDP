@@ -18,6 +18,6 @@ jobs:
       with:
         push: true
         context: .
-        tags: ${{ env.DOCKER_USERNAME }}/image-name:${{ env.TAG_NAME }}
+        tags: python:3.11.1,${{ env.DOCKER_USERNAME }}/image-name:v${{ env.TAG_NAME }}
         username: ${{ env.DOCKER_USERNAME }}
         password: ${{ env.DOCKER_PASSWORD }}
