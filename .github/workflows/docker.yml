@@ -3,7 +3,7 @@ name: Build and Push Docker Image
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -19,3 +19,6 @@ jobs:
         push: true
         context: .
         tags: python:3.11.1
+        tags: ${{ env.DOCKER_USERNAME }}/image-name:${{ env.TAG_NAME }}
+        username: ${{ env.DOCKER_USERNAME }}
+        password: ${{ env.DOCKER_PASSWORD }}
